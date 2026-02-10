@@ -6,31 +6,33 @@ interface StepListProps {
 
 export function StepList({ steps }: StepListProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {steps.map((step, index) => (
         <div
           key={index}
-          className="flex gap-4 p-4 bg-white rounded-lg border border-gray-200 
-          hover:border-gray-300 hover:shadow-sm transition-all duration-200"
+          className="flex gap-4 p-5 bg-white rounded-lg border border-slate-200 
+          hover:border-blue-300 hover:shadow-md transition-all duration-200 hover:bg-slate-50"
         >
           {/* Step Number */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <div
-              className="w-10 h-10 rounded-full bg-blue-600 text-white 
-              flex items-center justify-center font-bold text-lg"
+              className="w-10 h-10 rounded-lg bg-blue-950 text-white 
+              flex items-center justify-center font-bold text-lg shadow-md"
             >
               {index + 1}
             </div>
           </div>
 
           {/* Step Content */}
-          <div className="flex-1 pt-2">
-            <p className="text-gray-700 text-base leading-relaxed">{step}</p>
+          <div className="flex-1 pt-1">
+            <p className="text-gray-700 text-base leading-relaxed font-sans">
+              {step}
+            </p>
           </div>
 
           {/* Completion Icon (visual only) */}
-          <div className="flex-shrink-0 pt-2">
-            <CheckCircle2 className="w-6 h-6 text-gray-300" />
+          <div className="shrink-0 pt-1">
+            <CheckCircle2 className="w-5 h-5 text-slate-300" />
           </div>
         </div>
       ))}
