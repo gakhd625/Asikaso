@@ -25,7 +25,7 @@ export default function ServicesPage() {
             <div>
               <h3 className="font-serif font-bold text-white mb-2 text-lg">Recommended Application Order</h3>
               <p className="text-blue-100 leading-relaxed">
-                For first-time job seekers, we recommend applying in this order: <span className="text-amber-300 font-semibold">SSS → PhilHealth → Pag-IBIG → NBI Clearance</span>. Most employers require all four documents.
+                For first-time job seekers, we recommend applying in this order: <span className="text-amber-300 font-semibold">SSS → PhilHealth → Pag-IBIG → NBI Clearance → BIR(TIN)</span>. Most employers require all four documents.
               </p>
             </div>
           </div>

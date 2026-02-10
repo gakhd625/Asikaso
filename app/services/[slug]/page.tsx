@@ -183,6 +183,16 @@ export default async function ServicePage({
           </div>
         </div>
 
+        {/* Service-Specific Note */}
+        {service.note && (
+          <div className="bg-slate-50 border-2 border-slate-300 rounded-lg p-6 mb-10 shadow-sm">
+            <h3 className="font-serif font-bold text-slate-950 mb-3 text-lg">
+              Note
+            </h3>
+            <p className="text-slate-700 leading-relaxed">{service.note}</p>
+          </div>
+        )}
+
         {/* Quick Info Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
           <div className="bg-white border-2 border-slate-200 rounded-lg p-6 shadow-sm">
