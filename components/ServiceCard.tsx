@@ -17,6 +17,7 @@ const iconMap: Record<string, LucideIcon> = {
   Home,
   Heart,
   FileText,
+  FileText,
 };
 
 const colorMap: Record<
@@ -71,8 +72,8 @@ export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Link href={`/services/${service.slug}`}>
       <div
-        className={`group relative p-6 sm:p-7 rounded-lg border-2 ${colors.border} ${colors.bg} ${colors.hover} 
-        transition-all duration-300 cursor-pointer h-full shadow-sm`}
+        className={`group relative p-6 sm:p-7 rounded-lg border transition-all duration-300 cursor-pointer h-full shadow-sm bg-white`}
+        style={{ borderColor: 'rgba(15,23,42,0.06)' }}
       >
         {/* Logo/Image Container */}
         <div className="mb-4 overflow-hidden rounded-lg bg-white border-2 border-slate-200 h-32 flex items-center justify-center">
@@ -90,18 +91,16 @@ export function ServiceCard({ service }: ServiceCardProps) {
 
         {/* Content */}
         <div className="space-y-2 mb-4">
-          <h3 className="text-lg font-serif font-bold text-blue-950 group-hover:text-blue-800 transition-colors">
+          <h3 className="text-lg font-serif font-bold transition-colors" style={{color:'var(--primary-navy)'}}>
             {service.name}
           </h3>
-          <p className="text-gray-700 text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed muted">
             {service.description}
           </p>
         </div>
 
         {/* Action Indicator */}
-        <div
-          className={`mt-4 flex items-center text-sm font-semibold text-blue-950 ${colors.accent} transition-colors`}
-        >
+        <div className={`mt-4 flex items-center text-sm font-semibold transition-colors`} style={{color:'var(--accent-blue)'}}>
           <span>View guide</span>
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </div>

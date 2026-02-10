@@ -6,26 +6,26 @@ import { AlertCircle, Lightbulb } from "lucide-react";
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-white to-slate-50">
+    <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Hero Section */}
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-blue-950 mb-4">
+          <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl mb-4">
             Government Services
           </h1>
-          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed muted">
             Choose a service below to access step-by-step instructions and official government links.
           </p>
         </div>
 
         {/* Info Banner */}
-        <div className="bg-linear-to-r from-blue-950 to-blue-900 border-l-4 border-amber-400 rounded-lg p-6 sm:p-8 mb-12 shadow-lg">
+        <div className="rounded-lg p-6 sm:p-8 mb-12 shadow-sm" style={{backgroundColor:'rgba(19,133,255,0.06)', borderLeft: '4px solid rgba(19,133,255,0.12)'}}>
           <div className="flex items-start gap-4">
-            <AlertCircle className="w-6 h-6 text-amber-400 shrink-0 mt-1" />
+            <AlertCircle className="w-6 h-6" style={{color:'var(--accent-blue)'}} />
             <div>
-              <h3 className="font-serif font-bold text-white mb-2 text-lg">Recommended Application Order</h3>
-              <p className="text-blue-100 leading-relaxed">
-                For first-time job seekers, we recommend applying in this order: <span className="text-amber-300 font-semibold">SSS → PhilHealth → Pag-IBIG → NBI Clearance</span>. Most employers require all four documents.
+              <h3 className="font-serif font-bold mb-2 text-lg" style={{color:'var(--primary-navy)'}}>Recommended Application Order</h3>
+              <p className="muted leading-relaxed">
+                For first-time job seekers, we recommend applying in this order: <span className="font-semibold">SSS → PhilHealth → Pag-IBIG → NBI Clearance</span>. Most employers require all four documents.
               </p>
             </div>
           </div>
@@ -44,30 +44,30 @@ export default function ServicesPage() {
         </div>
 
         {/* Tips Section */}
-        <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-7 sm:p-8 mt-12 shadow-md">
+        <div className="rounded-lg p-7 sm:p-8 mt-12 shadow-sm" style={{backgroundColor:'rgba(107,114,128,0.05)', border:'1px solid rgba(107,114,128,0.06)'}}>
           <div className="flex items-start gap-4 mb-4">
-            <Lightbulb className="w-6 h-6 text-amber-600 shrink-0 mt-1" />
-            <h3 className="font-serif font-bold text-amber-950 text-xl">Pro Tips for Beginners</h3>
+            <Lightbulb className="w-6 h-6" style={{color:'var(--accent-blue)'}} />
+            <h3 className="font-serif font-bold text-xl" style={{color:'var(--primary-navy)'}}>Pro Tips for Beginners</h3>
           </div>
-          <ul className="space-y-3 text-amber-900">
+          <ul className="space-y-3 muted">
             <li className="flex items-start gap-3">
-              <span className="text-amber-600 font-bold text-lg leading-none">✓</span>
+              <span className="font-bold text-lg leading-none">✓</span>
               <span className="text-base">Always use official government websites ending in <span className="font-semibold">.gov.ph</span> domains</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-amber-600 font-bold text-lg leading-none">✓</span>
+              <span className="font-bold text-lg leading-none">✓</span>
               <span className="text-base">Prepare and organize valid IDs before starting any application process</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-amber-600 font-bold text-lg leading-none">✓</span>
+              <span className="font-bold text-lg leading-none">✓</span>
               <span className="text-base">Take screenshots or save your application reference numbers and confirmation emails</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-amber-600 font-bold text-lg leading-none">✓</span>
+              <span className="font-bold text-lg leading-none">✓</span>
               <span className="text-base">Always check for schedule availability before visiting government branches</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-amber-600 font-bold text-lg leading-none">✓</span>
+              <span className="font-bold text-lg leading-none">✓</span>
               <span className="text-base">Beware of scams and unauthorized fixers offering quick services</span>
             </li>
           </ul>

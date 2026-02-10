@@ -16,8 +16,9 @@ export function StepList({ steps }: StepListProps) {
           {/* Step Number */}
           <div className="shrink-0">
             <div
-              className="w-10 h-10 rounded-lg bg-blue-950 text-white 
+              className="w-10 h-10 rounded-lg text-white 
               flex items-center justify-center font-bold text-lg shadow-md"
+              style={{ backgroundColor: 'var(--accent-blue)' }}
             >
               {index + 1}
             </div>
@@ -25,7 +26,7 @@ export function StepList({ steps }: StepListProps) {
 
           {/* Step Content */}
           <div className="flex-1 pt-1">
-            <p className="text-gray-700 text-base leading-relaxed font-sans">
+            <p className="text-base leading-relaxed font-sans muted">
               {step}
             </p>
           </div>

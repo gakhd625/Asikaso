@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f5f5;
-  --foreground: #003366;
-  --primary-navy: #003366;
-  --secondary-blue: #0055a5;
-  --accent-gold: #d4af37;
+  --background: #ffffff;
+  --foreground: #0b3a61; /* deep navy for primary text */
+  --primary-navy: #0b3a61;
+  --accent-blue: #1385ff; /* bright accent blue for CTAs */
+  --muted-gray: #6b7280;
 }
 
 @theme inline {
@@ -16,9 +16,15 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* subtle dotted grid background like the reference */
+  background-image: radial-gradient(circle at 1px 1px, rgba(11,58,97,0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,6 +53,34 @@ h1, h2, h3, h4, h5, h6 {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Minimalist hero styling */
+.hero-title {
+  font-weight: 900;
+  color: var(--primary-navy);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.hero-title .accent {
+  color: var(--accent-blue);
+  display: block;
+}
+
+.btn-primary {
+  background-color: var(--accent-blue);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.muted {
+  color: var(--muted-gray);
 }
 
 /* Focus styles for accessibility with government theme */

@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${merriweather.variable} font-sans antialiased bg-slate-50 min-h-screen`}
+        className={`${inter.variable} ${merriweather.variable} font-sans antialiased min-h-screen`}
       >
         <Header />
         <main>{children}</main>

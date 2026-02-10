@@ -4,6 +4,7 @@ export interface Service {
   shortName: string;
   description: string;
   longDescription: string;
+  note?: string;
   steps: string[];
   officialLink: string;
   icon: string;
@@ -120,18 +121,17 @@ export const services: Service[] = [
       "Bureau of Internal Revenue Tax Identification Number for tax purposes.",
     longDescription:
       "The BIR TIN (Tax Identification Number) is a unique identifier issued by the Bureau of Internal Revenue to individuals and businesses for tax compliance. It is required for various financial transactions and business operations in the Philippines.",
+    note: `Some BIR Revenue District Offices (RDOs) require IDs that show a local address. If your uploaded ID does not match the RDO's region, your application may be referred for additional documents. Commonly requested documents include a Barangay Clearance/Certification, proof of residency, an employer letter, or other official IDs. Requirements vary by RDO — contact your assigned RDO for exact instructions and accepted documents.`,
     steps: [
-      "Visit the Bureau of Internal Revenue website at www.bir.gov.ph",
-      "Download the BIR Form 1901 (Application for TIN) or request it at the nearest BIR office or Go to eServices and click the Orus",
-      "Click New Registration-> As an Individual-> Create Account-> Scroll Down then check 'I have Agreed' then press  'Agree'",
-      "Fill out the form completely with your personal and financial information",
-      "Prepare required documents (valid ID, proof of address, business documents if applicable)",
-      "Visit the BIR office in your area with your completed form and documents",
-      "Submit your application to the BIR personnel",
-      "Pay the required fees (free for individual TIN registration)",
-      "Wait for processing (usually completed on the same day for individuals)",
-      "Receive your TIN from the BIR office",
-      "Keep your TIN Certificate for future reference and financial transactions",
+      "Visit the official BIR website at www.bir.gov.ph",
+      "Click 'eServices' then 'TIN Registration' (for individuals) or 'eRegistration' (for businesses)",
+      "Select the appropriate form: BIR Form 1901 for individuals, 1903 for corporations, or 1904 for other types",
+      "Fill out the online application form with your personal or business information",
+      "Upload required supporting documents (valid ID, birth certificate, or SEC registration for businesses)",
+      "Submit the application online and note your application reference number",
+      "Wait for confirmation from BIR via email or SMS",
+      "Visit the nearest BIR Revenue District Office (RDO) if instructed to finalize registration",
+      "Receive your TIN which you can use for all official tax transactions",
     ],
     officialLink: "https://www.bir.gov.ph/",
     icon: "FileText",
