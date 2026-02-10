@@ -1,31 +1,16 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowLeft,
   ExternalLink,
   AlertTriangle,
-  Shield,
-  Users,
-  Home,
-  Heart,
-  FileText,
   CheckCircle,
   Clock,
 } from "lucide-react";
-import {
-  getServiceBySlug,
-  getAllServiceSlugs,
-} from "@/data/services";
+import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 import { StepList } from "@/components";
 
-// Map icon names to components
-const iconMap: Record<string, typeof Shield> = {
-  Shield,
-  Users,
-  Home,
-  Heart,
-  FileText,
-};
 
 const colorMap: Record<
   string,
@@ -120,7 +105,6 @@ export default async function ServicePage({
     notFound();
   }
 
-  const Icon = iconMap[service.icon] || Shield;
   const colors = colorMap[service.color] || colorMap.blue;
 
   return (
@@ -141,14 +125,18 @@ export default async function ServicePage({
           className={`${colors.light} ${colors.border} border-2 rounded-lg p-8 sm:p-10 mb-10 shadow-sm`}
         >
           <div className="flex flex-col sm:flex-row items-start gap-6">
-            {/* Icon */}
-            <div
-              className={`w-20 h-20 rounded-lg ${colors.bg} ${colors.border} border-2 flex items-center justify-center shrink-0`}
-            >
-              <Icon
-                className={`w-10 h-10 ${colors.accent}`}
-                strokeWidth={1.5}
-              />
+            {/* Logo Image */}
+            <div className="w-24 h-24 rounded-lg bg-white border-2 border-slate-200 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+              {service.logo && (
+                <Image
+                  src={service.logo}
+                  alt={service.name}
+                  width={96}
+                  height={96}
+                  className="object-contain p-2"
+                  priority
+                />
+              )}
             </div>
 
             {/* Title & Description */}

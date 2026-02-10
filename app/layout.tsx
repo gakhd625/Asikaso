@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     "Philippine Government",
     "Guide",
   ],
+  icons: {
+    icon: [
+      {
+        url: "/images/logo/asikaso-logo.png",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
