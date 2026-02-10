@@ -1,23 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Shield,
-  Users,
-  Home,
-  Heart,
-  FileText,
-  LucideIcon,
   ArrowRight,
 } from "lucide-react";
 import { Service } from "@/data/services";
 
-const iconMap: Record<string, LucideIcon> = {
-  Shield,
-  Users,
-  Home,
-  Heart,
-  FileText,
-};
 
 const colorMap: Record<
   string,
@@ -65,7 +52,6 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
-  const Icon = iconMap[service.icon] || Shield;
   const colors = colorMap[service.color] || colorMap.blue;
 
   return (
