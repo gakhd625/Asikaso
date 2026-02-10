@@ -8,6 +8,7 @@ export interface Service {
   officialLink: string;
   icon: string;
   color: string;
+  logo: string;
 }
 
 export const services: Service[] = [
@@ -15,7 +16,8 @@ export const services: Service[] = [
     slug: "nbi-clearance",
     name: "NBI Clearance",
     shortName: "NBI",
-    description: "National Bureau of Investigation clearance for employment and other purposes.",
+    description:
+      "National Bureau of Investigation clearance for employment and other purposes.",
     longDescription:
       "The NBI Clearance is a document issued by the National Bureau of Investigation certifying that you have no pending criminal case or derogatory record. It is commonly required for employment, visa applications, and other legal transactions in the Philippines.",
     steps: [
@@ -33,17 +35,19 @@ export const services: Service[] = [
     officialLink: "https://clearance.nbi.gov.ph/",
     icon: "Shield",
     color: "blue",
+    logo: "/images/logo/NBI.png",
   },
   {
     slug: "sss-registration",
     name: "SSS Registration",
     shortName: "SSS",
-    description: "Social Security System membership for employed and self-employed individuals.",
+    description:
+      "Social Security System membership for employed and self-employed individuals.",
     longDescription:
       "The Social Security System (SSS) is a government agency that provides social security protection to workers in the private sector. As a member, you can avail of benefits such as sickness, maternity, disability, retirement, death, and funeral benefits.",
     steps: [
       "Visit the official SSS website at www.sss.gov.ph",
-      "Click 'Online Services' then 'Online Member Registration'",
+      "Click 'Apply for an SS Number Online'",
       "Fill out the Personal Information form (name, birthdate, address, etc.)",
       "Provide your employment details if currently employed",
       "Upload a scanned copy of your valid ID (birth certificate, passport, or driver's license)",
@@ -56,12 +60,14 @@ export const services: Service[] = [
     officialLink: "https://www.sss.gov.ph/",
     icon: "Users",
     color: "green",
+    logo: "/images/logo/SSS.png",
   },
   {
     slug: "pagibig-registration",
     name: "Pag-IBIG Fund Registration",
     shortName: "Pag-IBIG",
-    description: "Home Development Mutual Fund for savings and housing loan programs.",
+    description:
+      "Home Development Mutual Fund for savings and housing loan programs.",
     longDescription:
       "The Pag-IBIG Fund (Home Development Mutual Fund) is a government agency that provides affordable shelter financing and a provident savings program. Members can avail of housing loans, multi-purpose loans, and calamity loans at low interest rates.",
     steps: [
@@ -79,12 +85,14 @@ export const services: Service[] = [
     officialLink: "https://www.pagibigfund.gov.ph/",
     icon: "Home",
     color: "yellow",
+    logo: "/images/logo/pag-ibig.png",
   },
   {
     slug: "philhealth-registration",
     name: "PhilHealth Registration",
     shortName: "PhilHealth",
-    description: "Philippine Health Insurance Corporation for healthcare coverage.",
+    description:
+      "Philippine Health Insurance Corporation for healthcare coverage.",
     longDescription:
       "PhilHealth (Philippine Health Insurance Corporation) is a government agency that provides health insurance coverage to all Filipinos. As a member, you can avail of benefits such as hospitalization, outpatient care, and Z benefits for specific illnesses.",
     steps: [
@@ -102,6 +110,33 @@ export const services: Service[] = [
     officialLink: "https://www.philhealth.gov.ph/",
     icon: "Heart",
     color: "red",
+    logo: "/images/logo/PHILHEALTH.png",
+  },
+  {
+    slug: "bir-tin-registration",
+    name: "BIR TIN Registration",
+    shortName: "BIR TIN",
+    description:
+      "Bureau of Internal Revenue Tax Identification Number for tax purposes.",
+    longDescription:
+      "The BIR TIN (Tax Identification Number) is a unique identifier issued by the Bureau of Internal Revenue to individuals and businesses for tax compliance. It is required for various financial transactions and business operations in the Philippines.",
+    steps: [
+      "Visit the Bureau of Internal Revenue website at www.bir.gov.ph",
+      "Download the BIR Form 1901 (Application for TIN) or request it at the nearest BIR office or Go to eServices and click the Orus",
+      "Click New Registration-> As an Individual-> Create Account-> Scroll Down then check 'I have Agreed' then press  'Agree'",
+      "Fill out the form completely with your personal and financial information",
+      "Prepare required documents (valid ID, proof of address, business documents if applicable)",
+      "Visit the BIR office in your area with your completed form and documents",
+      "Submit your application to the BIR personnel",
+      "Pay the required fees (free for individual TIN registration)",
+      "Wait for processing (usually completed on the same day for individuals)",
+      "Receive your TIN from the BIR office",
+      "Keep your TIN Certificate for future reference and financial transactions",
+    ],
+    officialLink: "https://www.bir.gov.ph/",
+    icon: "FileText",
+    color: "purple",
+    logo: "/images/logo/BIR.png",
   },
 ];
 
