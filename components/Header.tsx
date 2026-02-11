@@ -33,6 +33,13 @@ export function Header() {
               Services
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link
+              href="/faqs"
+              className="text-sm font-medium text-blue-100 hover:text-amber-400 transition-colors relative group"
+            >
+              FAQs
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+            </Link>
           </nav>
         </div>
       </div>
