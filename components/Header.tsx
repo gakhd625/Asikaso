@@ -33,29 +33,6 @@ export function Header() {
               Services
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <a
-              href="https://www.gov.ph"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-blue-100 hover:text-amber-400 transition-colors 
-              hidden sm:inline-flex items-center gap-1 relative group"
-            >
-              Gov.ph
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
           </nav>
         </div>
       </div>
