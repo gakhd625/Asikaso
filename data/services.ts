@@ -9,6 +9,7 @@ export interface Service {
   icon: string;
   color: string;
   logo: string;
+  note?: string;
 }
 
 export const services: Service[] = [
@@ -137,6 +138,7 @@ export const services: Service[] = [
     icon: "FileText",
     color: "purple",
     logo: "/images/logo/BIR.png",
+    note: "Some BIR Revenue District Offices (RDOs) require IDs that show a local address. If your uploaded ID does not match the RDO's region, your application may be referred for additional documents. Commonly requested documents include a Barangay Clearance/Certification, proof of residency, an employer letter, or other official IDs. Requirements vary by RDO — contact your assigned RDO for exact instructions and accepted documents.",
   },
 ];
 
